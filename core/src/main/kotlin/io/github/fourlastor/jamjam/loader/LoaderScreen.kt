@@ -55,6 +55,12 @@ class LoaderScreen<Assets>(
         super.render(delta)
         val progress = assetStorage.progress
 
+        Gdx.app.debug("Loader", "progress.total: ${progress.total}")
+        Gdx.app.debug("Loader", "progress.loaded: ${progress.loaded}")
+        Gdx.app.debug("Loader", "progress.percent: ${progress.percent}")
+        Gdx.app.debug("Loader", "progress.isFinished: ${progress.isFinished}")
+
+
         progressBar.value = progress.percent
 
         stage.act()
