@@ -16,10 +16,11 @@ class MapScreen(
 ) : KtxScreen {
 
     private val mapViewport = FitViewport(10f, 10f).apply {
-        camera.position.set(5f, 5f, 0f)
+        camera.position.set(5f, 13f, 0f)
     }
     private val spriteBatch = SpriteBatch()
-    private val tile = assets.atlas.findRegion("wall_corner_front_right")
+
+    private val renderer = LdtkMapRenderer(spriteBatch, mapViewport, assets.map)
 
     override fun resize(width: Int, height: Int) {
         val scale = min(width.toFloat() / 320f, height.toFloat() / 180f)
@@ -34,9 +35,8 @@ class MapScreen(
     override fun render(delta: Float) {
         super.render(delta)
 
-        mapViewport.apply()
-        spriteBatch.use(mapViewport.camera) {
-            spriteBatch.draw(tile, 0f, 0f, 10f, 10f)
+        spriteBatch.use {
+            renderer.render()
         }
     }
 
@@ -64,12 +64,10 @@ class MapScreen(
 
 data class Assets(
     val map: LdtkMap,
-    val atlas: TextureAtlas,
 ) {
     companion object {
         suspend fun load(assetStorage: AssetStorage) = Assets(
             map = assetStorage.load("diceon.ldtk"),
-            atlas = assetStorage.load("atlases/dungeon.atlas")
         )
     }
 }
