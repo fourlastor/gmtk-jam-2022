@@ -1,8 +1,13 @@
 package io.github.fourlastor.jamjam.map
 
+import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.maps.Map
-import io.github.fourlastor.ldtk.LDtkMapData
+import com.badlogic.gdx.maps.MapLayer
 
 class LdtkMap(
-    private val lDtkMapData: LDtkMapData,
+    val layers: List<LdtkMapLayer>,
 ) : Map()
+
+class LdtkMapLayer(
+    val tiles: List<Sprite>,
+) : MapLayer()
