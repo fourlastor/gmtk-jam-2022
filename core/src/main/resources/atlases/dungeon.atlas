@@ -4,62 +4,62 @@ size: 64, 128
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-floor
-  rotate: false
-  xy: 1, 109
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: 2
-floor
-  rotate: false
-  xy: 1, 91
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: 7
-floor
-  rotate: false
-  xy: 19, 91
-  size: 16, 16
-  orig: 16, 16
-  offset: 0, 0
-  index: 4
-floor
+floor_1
   rotate: false
   xy: 19, 73
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
-  index: 1
-floor
+  index: -1
+floor_2
   rotate: false
-  xy: 19, 55
+  xy: 1, 109
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
-  index: 6
-floor
+  index: -1
+floor_3
   rotate: false
   xy: 1, 19
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
-  index: 3
-floor
+  index: -1
+floor_4
   rotate: false
-  xy: 37, 55
+  xy: 19, 91
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
-  index: 8
-floor
+  index: -1
+floor_5
   rotate: false
   xy: 19, 19
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
-  index: 5
+  index: -1
+floor_6
+  rotate: false
+  xy: 19, 55
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+floor_7
+  rotate: false
+  xy: 1, 91
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+floor_8
+  rotate: false
+  xy: 37, 55
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
 wall_corner_bottom_left
   rotate: false
   xy: 37, 73

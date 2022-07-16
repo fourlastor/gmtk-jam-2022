@@ -29,7 +29,7 @@ grid=false
 square=false
 bleed=true
 limitMemory=true
-useIndexes=true
+useIndexes=false
 
 scaleFactors=[{suffix:"",factor:1,resampling:bicubic}]
 inputFiles=[{path:0x72_DungeonTilesetII_v1.4/frames,type:Input,dirFilePrefix:null,recursive:false,flattenPaths:false}]
