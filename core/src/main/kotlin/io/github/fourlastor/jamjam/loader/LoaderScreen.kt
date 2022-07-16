@@ -63,7 +63,6 @@ class LoaderScreen<Assets>(
 
     override fun dispose() {
         super.dispose()
-        Gdx.app.debug("Loader", "Dispose")
         stage.dispose()
     }
 

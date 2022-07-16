@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import io.github.fourlastor.jamjam.DiceonGame
 import io.github.fourlastor.jamjam.loader.LoaderScreen
 import ktx.app.KtxScreen
+import ktx.assets.async.Asset
 import ktx.assets.async.AssetStorage
 
 class MapScreen(
@@ -27,7 +28,7 @@ class MapScreen(
                         game.apply {
                             addScreen(MapScreen(it))
                             setScreen<MapScreen>()
-                            removeScreen<LoaderScreen<Assets>>()
+                            clearScreen<LoaderScreen<Assets>>()
                         }
                     }
                 )
