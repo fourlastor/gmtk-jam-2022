@@ -1,11 +1,9 @@
 package io.github.fourlastor.jamjam.map
 
 import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import io.github.fourlastor.jamjam.DiceonGame
 import io.github.fourlastor.jamjam.loader.LoaderScreen
 import ktx.app.KtxScreen
-import ktx.assets.async.Asset
 import ktx.assets.async.AssetStorage
 
 class MapScreen(
@@ -39,11 +37,11 @@ class MapScreen(
 }
 
 data class Assets(
-    val textureAtlas: TextureAtlas,
+    val map: LdtkMap,
 ) {
     companion object {
         suspend fun load(assetStorage: AssetStorage) = Assets(
-            textureAtlas = assetStorage.load("atlases/dungeon.atlas")
+            map = assetStorage.load("diceon.ldtk")
         )
     }
 }
