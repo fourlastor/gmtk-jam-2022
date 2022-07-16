@@ -29,7 +29,7 @@ class LevelScreen(
     private val scale = 1f / 16f
     private val factory = AssetFactory(scale)
     private val converter = LDtkConverter(factory)
-    private val level = converter.convert(levelDefinition, definitions)
+//    private val level = converter.convert(levelDefinition, definitions)
 
     private val camera = OrthographicCamera().apply {
         setToOrtho(true)
