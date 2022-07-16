@@ -65,7 +65,7 @@ class AssetFactory(private val scale: Float) : Disposable {
         .toList()
 
     override fun dispose() {
-        atlas.dispose()
-        parallaxAtlas.dispose()
+//        atlas.dispose()
+//        parallaxAtlas.dispose()
     }
 }

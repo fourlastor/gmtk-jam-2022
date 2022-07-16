@@ -11,7 +11,7 @@ import ktx.scene2d.vis.visTable
 import ktx.scene2d.vis.visTextButton
 
 class MenuScreen(
-    private val game: JamGame,
+    private val game: DiceonGame,
     private val gameData: LDtkMapData,
 ) : KtxScreen {
 

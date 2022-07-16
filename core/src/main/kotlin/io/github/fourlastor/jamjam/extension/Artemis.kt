@@ -35,5 +35,5 @@ abstract class BaseEntityIntervalSystem(
 
 
 inline fun World.create(action: World.(entityId: Int) -> Unit) = create().also { action(it) }
-inline fun <reified T: Component> World.component(entityId: Int, action: T.() -> Unit = {}) = edit(entityId)
+inline fun <reified T: Component> World.component(entityId: Int, action: T.() -> Unit = {}): T = edit(entityId)
     .create(T::class.java).apply(action)
